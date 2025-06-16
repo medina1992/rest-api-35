@@ -1,7 +1,9 @@
 package tests;
 
-import models.LoginBodyModel;
-import models.LoginResponseModel;
+import lombok.LoginBodyLombokModel;
+import lombok.LoginResponseLombokModel;
+import models.pojo.LoginBodyModel;
+import models.pojo.LoginResponseModel;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -18,12 +20,12 @@ public class LoginExtendenTests {
   */
 
     @Test
-    void successfulLoginTest() {
-        LoginBodyModel authData = new LoginBodyModel();
+    void successfulLoginLombokTest() {
+        LoginBodyLombokModel authData = new LoginBodyLombokModel();
         authData.setEmail("eve.holt@reqres.in");
         authData.setPassword("pistol");
 
-        LoginResponseModel response = given()
+        LoginResponseLombokModel response = given()
                 .body(authData)
                 .contentType(JSON)
                 .header("x-api-key", "reqres-free-v1")
@@ -36,7 +38,7 @@ public class LoginExtendenTests {
                 .log().status()
                 .log().body()
                 .statusCode(200)
-                .extract().as(LoginResponseModel.class);
+                .extract().as(LoginResponseLombokModel.class);
         assertEquals("QpwL5tke4Pnpja7X4", response.getToken());
     }
 
