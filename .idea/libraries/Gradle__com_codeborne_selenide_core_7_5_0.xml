@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.codeborne:selenide-core:7.5.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.codeborne" artifactId="selenide-core" version="7.5.0" baseVersion="7.5.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/selenide-core/7.5.0/2ab16629eec483dd14f7d224439d396075484042/selenide-core-7.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

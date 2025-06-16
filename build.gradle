@@ -20,7 +20,7 @@ dependencies {
             'com.opencsv:opencsv:5.11',
             'org.assertj:assertj-core:3.27.3',
             'io.rest-assured:rest-assured:5.3.1',
-            "io.rest-assured:json-schema-validator:$restAssuredVersion",
+            "io.rest-assured:json-schema-validator:5.3.1",
 
     )
 }
