@@ -64,4 +64,19 @@ public class ReqresSimpleTests extends TestBase {
                 .then()
                 .statusCode(204);
     }
+
+
+    @Test
+    void updateUserWithPutTest() {
+        String requestBody = "{ \"job\": \"zion resident\" }";
+
+        given()
+                .body(requestBody)
+                .header("Content-Type", "application/json")
+                .when()
+                .patch("/users/2")
+                .then()
+                .statusCode(200)
+                .body("job", equalTo("zion resident"));
+    }
 }
