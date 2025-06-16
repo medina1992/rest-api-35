@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
@@ -20,7 +21,6 @@ public class ReqresSimpleTests extends TestBase {
     @Test
     void singleUserNotFoundTest() {
         given()
-
                 .when()
                 .get("/users/23")
                 .then()
@@ -59,13 +59,11 @@ public class ReqresSimpleTests extends TestBase {
     @Test
     void deleteUserTest() {
         given()
-
                 .when()
                 .delete("/users/2")
                 .then()
                 .statusCode(204);
     }
-
 
     @Test
     void updateUserWithPutTest() {
@@ -75,7 +73,7 @@ public class ReqresSimpleTests extends TestBase {
                 .body(requestBody)
                 .header("Content-Type", "application/json")
                 .when()
-                .patch("/users/2")
+                .put("/users/2")
                 .then()
                 .statusCode(200)
                 .body("job", equalTo("zion resident"));
